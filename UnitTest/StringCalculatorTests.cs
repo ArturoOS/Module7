@@ -31,5 +31,11 @@ namespace UnitTest
         {
             int sum = StringCalculator.Add("uno,2,3");
         }
+        [TestMethod]
+        public void Should_Not_Sum_Numbers_Greater_Than_1000()
+        {
+            int sum = StringCalculator.Add("2,1001");
+            Assert.AreEqual(2, sum);
+        }
     }
 }

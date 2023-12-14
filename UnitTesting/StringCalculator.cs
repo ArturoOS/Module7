@@ -18,6 +18,8 @@ namespace UnitTesting
                 {
                     if (num < 0)
                         throw new ArgumentException("negatives not allowed");
+                    if (num > 1000)
+                        num = 0;
                     sum = sum + num;
                 }
                 else

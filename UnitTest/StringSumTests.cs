@@ -25,5 +25,17 @@ namespace UnitTest
         {
             int sum = StringSum.Sum("uno", "1");
         }
+        [TestMethod]
+        public void Should_Treat_As_Zero_Decimal_Numbers()
+        {
+            int sum = StringSum.Sum("1.1", "1");
+            Assert.AreEqual(1, sum);         
+        }
+        [TestMethod]
+        public void Should_Treat_As_Zero_Decimal_Numbers_2()
+        {
+            int sum = StringSum.Sum("1.1", "10.5");
+            Assert.AreEqual(0, sum);
+        }
     }
 }
